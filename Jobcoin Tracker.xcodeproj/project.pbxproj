@@ -12,6 +12,7 @@
 		071A8EE621125A2B008051ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE421125A2B008051ED /* Main.storyboard */; };
 		071A8EE821125A33008051ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE721125A33008051ED /* Assets.xcassets */; };
 		071A8EEB21125A33008051ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE921125A33008051ED /* LaunchScreen.storyboard */; };
+		4A9EE1264F2597452534A2B3 /* Pods_Jobcoin_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA3848B1BB0FE7985EDF386 /* Pods_Jobcoin_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		071A8EE721125A33008051ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		071A8EEA21125A33008051ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071A8EEC21125A33008051ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DA3848B1BB0FE7985EDF386 /* Pods_Jobcoin_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobcoin_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E5870E0E90A96BF6B53C73 /* Pods-Jobcoin Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobcoin Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		A6EF9D3D612210E9C474F0A4 /* Pods-Jobcoin Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobcoin Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9EE1264F2597452534A2B3 /* Pods_Jobcoin_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				071A8EDF21125A2B008051ED /* Jobcoin Tracker */,
 				071A8EDE21125A2B008051ED /* Products */,
+				B7488343285C235E9E41858E /* Pods */,
+				0B684C7759D33DAFB694463B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Jobcoin Tracker";
 			sourceTree = "<group>";
 		};
+		0B684C7759D33DAFB694463B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DA3848B1BB0FE7985EDF386 /* Pods_Jobcoin_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7488343285C235E9E41858E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39E5870E0E90A96BF6B53C73 /* Pods-Jobcoin Tracker.debug.xcconfig */,
+				A6EF9D3D612210E9C474F0A4 /* Pods-Jobcoin Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071A8EEF21125A33008051ED /* Build configuration list for PBXNativeTarget "Jobcoin Tracker" */;
 			buildPhases = (
+				E268903ABA203E3C3593F2F0 /* [CP] Check Pods Manifest.lock */,
 				071A8ED921125A2B008051ED /* Sources */,
 				071A8EDA21125A2B008051ED /* Frameworks */,
 				071A8EDB21125A2B008051ED /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E268903ABA203E3C3593F2F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jobcoin Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		071A8ED921125A2B008051ED /* Sources */ = {
@@ -278,15 +324,13 @@
 		};
 		071A8EF021125A33008051ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39E5870E0E90A96BF6B53C73 /* Pods-Jobcoin Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJU7QW4TLU;
 				INFOPLIST_FILE = "Jobcoin Tracker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesvonlehe.Jobcoin-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +340,13 @@
 		};
 		071A8EF121125A33008051ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6EF9D3D612210E9C474F0A4 /* Pods-Jobcoin Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HJU7QW4TLU;
 				INFOPLIST_FILE = "Jobcoin Tracker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesvonlehe.Jobcoin-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
