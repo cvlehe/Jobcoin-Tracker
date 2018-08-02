@@ -6,5 +6,7 @@ target 'Jobcoin Tracker' do
   use_frameworks!
 
   # Pods for Jobcoin Tracker
-
+  pod 'TPKeyboardAvoiding', '~> 1.3.2'
+  pod 'Alamofire', '~> 4.7.0'
+  pod 'Charts'
 end

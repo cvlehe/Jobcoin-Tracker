@@ -8,21 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		071A8EE121125A2B008051ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EE021125A2B008051ED /* AppDelegate.swift */; };
-		071A8EE321125A2B008051ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EE221125A2B008051ED /* ViewController.swift */; };
 		071A8EE621125A2B008051ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE421125A2B008051ED /* Main.storyboard */; };
 		071A8EE821125A33008051ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE721125A33008051ED /* Assets.xcassets */; };
 		071A8EEB21125A33008051ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071A8EE921125A33008051ED /* LaunchScreen.storyboard */; };
+		071A8EF421135F85008051ED /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EF321135F85008051ED /* SignInViewController.swift */; };
+		071A8EF621135FB5008051ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EF521135FB5008051ED /* Constants.swift */; };
+		071A8EF821136160008051ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EF721136160008051ED /* Extensions.swift */; };
+		071A8EFB211364C4008051ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EFA211364C4008051ED /* User.swift */; };
+		071A8EFD211364DE008051ED /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EFC211364DE008051ED /* Transaction.swift */; };
+		071A8F0021137DF0008051ED /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8EFF21137DF0008051ED /* UserHelper.swift */; };
+		071A8F0221137E0F008051ED /* TransactionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F0121137E0F008051ED /* TransactionHelper.swift */; };
+		071A8F05211382E5008051ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F04211382E5008051ED /* MainViewController.swift */; };
+		071A8F07211391A3008051ED /* CurrentBalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F06211391A3008051ED /* CurrentBalanceTableViewCell.swift */; };
+		071A8F0A21139252008051ED /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F0921139252008051ED /* GraphTableViewCell.swift */; };
+		071A8F0C21139263008051ED /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F0B21139263008051ED /* TransactionTableViewCell.swift */; };
+		071A8F0E211392E2008051ED /* SendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A8F0D211392E2008051ED /* SendTableViewCell.swift */; };
 		4A9EE1264F2597452534A2B3 /* Pods_Jobcoin_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA3848B1BB0FE7985EDF386 /* Pods_Jobcoin_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		071A8EDD21125A2B008051ED /* Jobcoin Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobcoin Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		071A8EE021125A2B008051ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		071A8EE221125A2B008051ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		071A8EE521125A2B008051ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		071A8EE721125A33008051ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		071A8EEA21125A33008051ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071A8EEC21125A33008051ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071A8EF321135F85008051ED /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		071A8EF521135FB5008051ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		071A8EF721136160008051ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		071A8EFA211364C4008051ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		071A8EFC211364DE008051ED /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		071A8EFF21137DF0008051ED /* UserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
+		071A8F0121137E0F008051ED /* TransactionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHelper.swift; sourceTree = "<group>"; };
+		071A8F04211382E5008051ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		071A8F06211391A3008051ED /* CurrentBalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBalanceTableViewCell.swift; sourceTree = "<group>"; };
+		071A8F0921139252008051ED /* GraphTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTableViewCell.swift; sourceTree = "<group>"; };
+		071A8F0B21139263008051ED /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		071A8F0D211392E2008051ED /* SendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTableViewCell.swift; sourceTree = "<group>"; };
 		0DA3848B1BB0FE7985EDF386 /* Pods_Jobcoin_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobcoin_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E5870E0E90A96BF6B53C73 /* Pods-Jobcoin Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobcoin Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		A6EF9D3D612210E9C474F0A4 /* Pods-Jobcoin Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobcoin Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,14 +83,65 @@
 		071A8EDF21125A2B008051ED /* Jobcoin Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				071A8EEC21125A33008051ED /* Info.plist */,
+				071A8EF221135F65008051ED /* Initialization */,
+				071A8EF9211364B5008051ED /* View Controllers */,
+				071A8EFE211364ED008051ED /* Models */,
+				071A8F03211381CF008051ED /* Helpers */,
+				071A8F08211391A8008051ED /* Cells */,
+			);
+			path = "Jobcoin Tracker";
+			sourceTree = "<group>";
+		};
+		071A8EF221135F65008051ED /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
 				071A8EE021125A2B008051ED /* AppDelegate.swift */,
-				071A8EE221125A2B008051ED /* ViewController.swift */,
 				071A8EE421125A2B008051ED /* Main.storyboard */,
 				071A8EE721125A33008051ED /* Assets.xcassets */,
 				071A8EE921125A33008051ED /* LaunchScreen.storyboard */,
-				071A8EEC21125A33008051ED /* Info.plist */,
+				071A8EF521135FB5008051ED /* Constants.swift */,
+				071A8EF721136160008051ED /* Extensions.swift */,
 			);
-			path = "Jobcoin Tracker";
+			path = Initialization;
+			sourceTree = "<group>";
+		};
+		071A8EF9211364B5008051ED /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				071A8EF321135F85008051ED /* SignInViewController.swift */,
+				071A8F04211382E5008051ED /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		071A8EFE211364ED008051ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				071A8EFA211364C4008051ED /* User.swift */,
+				071A8EFC211364DE008051ED /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		071A8F03211381CF008051ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				071A8EFF21137DF0008051ED /* UserHelper.swift */,
+				071A8F0121137E0F008051ED /* TransactionHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		071A8F08211391A8008051ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				071A8F06211391A3008051ED /* CurrentBalanceTableViewCell.swift */,
+				071A8F0921139252008051ED /* GraphTableViewCell.swift */,
+				071A8F0B21139263008051ED /* TransactionTableViewCell.swift */,
+				071A8F0D211392E2008051ED /* SendTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		0B684C7759D33DAFB694463B /* Frameworks */ = {
@@ -99,6 +172,7 @@
 				071A8ED921125A2B008051ED /* Sources */,
 				071A8EDA21125A2B008051ED /* Frameworks */,
 				071A8EDB21125A2B008051ED /* Resources */,
+				B1148ABD4EF96E70E4AB93C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +230,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B1148ABD4EF96E70E4AB93C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jobcoin Tracker/Pods-Jobcoin Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E268903ABA203E3C3593F2F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,8 +277,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071A8EE321125A2B008051ED /* ViewController.swift in Sources */,
+				071A8F07211391A3008051ED /* CurrentBalanceTableViewCell.swift in Sources */,
+				071A8F0221137E0F008051ED /* TransactionHelper.swift in Sources */,
+				071A8EF421135F85008051ED /* SignInViewController.swift in Sources */,
+				071A8F0E211392E2008051ED /* SendTableViewCell.swift in Sources */,
 				071A8EE121125A2B008051ED /* AppDelegate.swift in Sources */,
+				071A8F0021137DF0008051ED /* UserHelper.swift in Sources */,
+				071A8EFD211364DE008051ED /* Transaction.swift in Sources */,
+				071A8EF621135FB5008051ED /* Constants.swift in Sources */,
+				071A8F05211382E5008051ED /* MainViewController.swift in Sources */,
+				071A8EFB211364C4008051ED /* User.swift in Sources */,
+				071A8F0A21139252008051ED /* GraphTableViewCell.swift in Sources */,
+				071A8F0C21139263008051ED /* TransactionTableViewCell.swift in Sources */,
+				071A8EF821136160008051ED /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
