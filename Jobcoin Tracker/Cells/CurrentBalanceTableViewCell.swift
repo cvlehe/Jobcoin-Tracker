@@ -24,6 +24,7 @@ class CurrentBalanceTableViewCell: UITableViewCell {
     }
 
     func populate () {
+        //Update cell based on current user's information
         addressLabel.text = User.current().address
         balanceLabel.text = "\(User.current().balance)"
     }

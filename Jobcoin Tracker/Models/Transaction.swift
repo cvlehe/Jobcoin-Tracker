@@ -15,6 +15,8 @@ struct Transaction {
     var amount:Float!
     
     init(json:[String:Any]) {
+        //initialize Transaction from json received from api
+
         if let dateString = json[Response.timestamp] as? String {
             
             let dateFormatter = DateFormatter()

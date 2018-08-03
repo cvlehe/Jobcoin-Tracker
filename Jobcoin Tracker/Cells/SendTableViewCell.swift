@@ -34,9 +34,14 @@ class SendTableViewCell: UITableViewCell {
     }
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
+        //When send pressed, show activity indicator and hide send button
         sender.isHidden = true
         activityIndicator.startAnimating()
+        
+        //Let the main view know so it can process the request
         delegate?.sendButtonPressed(toTextField: toTextField, amountTextField: amountTextField, completion: { (success) in
+            
+            //Once the request is completed, reset the send cell
             sender.isHidden = false
             self.activityIndicator.stopAnimating()
             

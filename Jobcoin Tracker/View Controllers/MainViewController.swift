@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //simple function for displaying the main view controller
     static func display (viewController:UIViewController) {
         let nextVC = viewController.storyboard?.instantiateViewController(withIdentifier: ViewControllerIds.MainViewController)
         viewController.present(nextVC!, animated: true, completion: nil)
@@ -44,6 +45,7 @@ extension MainViewController:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //the first three sections only need 1 row - the 4th depends on the amount of transactions
         switch section {
         case 0, 1, 2:
             return 1
@@ -114,20 +116,26 @@ extension MainViewController:UITableViewDataSource {
 }
 
 extension MainViewController:SendCellDelegate {
+    //Detect send button pressed from the send tableview cell
     func sendButtonPressed(toTextField: UITextField?, amountTextField: UITextField?, completion: @escaping (Bool) -> Void) {
+        
+        //Get the to address and make sure it's not empty
         guard let toAddress = toTextField?.text, !toAddress.isEmpty else {
             UIAlertController.showAlert(viewController: self, title: "To Address Required", message: "An address to send to is required. Please enter the recipient's address and try again.")
             completion(false)
             return
         }
         
+        //Get the amount and make sure it's not empty
         guard let amountString = amountTextField?.text, !amountString.isEmpty, let amount = Float(amountString)  else {
             UIAlertController.showAlert(viewController: self, title: "Amount Required", message: "An amount to send to is required. Please enter the amount and try again.")
             completion(false)
             return
         }
         
+        //Send transaction to api
         TransactionHelper.send(toAddress: toAddress, amount: amount) { (success, error) in
+            //If successful, reload the table - if not display error message
             if success {
                 self.tableView.reloadData()
             }else if let e = error {
@@ -135,6 +143,8 @@ extension MainViewController:SendCellDelegate {
             }else {
                 UIAlertController.showAlert(viewController: self, title: "Error", message: "There was an error signing in. Please try again.")
             }
+            
+            //Completion used to hide activity indicator and unhide the send button
             completion(success)
         }
         

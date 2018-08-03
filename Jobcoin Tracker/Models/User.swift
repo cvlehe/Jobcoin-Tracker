@@ -18,6 +18,7 @@ struct User {
     init() {}
     
     init(address:String, json:[String:Any]) {
+        //initialize User from json received from api
         self.address = address
         if let balanceString = json[Response.balance] as? String, let balanceFloat = Float(balanceString) {
             balance = balanceFloat
@@ -42,10 +43,12 @@ struct User {
         currentUser = user
     }
     
+    //Add transaction to current user's transaction history
     static func addTransaction (transaction:Transaction) {
         currentUser.transactions.insert(transaction, at: 0)
     }
     
+    //Update current user's balance
     static func updateBalance (amount:Float) {
         currentUser.balance += amount
     }

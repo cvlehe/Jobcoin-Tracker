@@ -24,15 +24,24 @@ class GraphTableViewCell: UITableViewCell {
     }
     
     func populate () {
+        //Generate bar chart data entries
         var entries:[BarChartDataEntry] = []
         let transactions:[Transaction] = User.current().transactions.reversed()
         for i in 0..<transactions.count {
             entries.append(BarChartDataEntry(x: Double(i), y: Double(transactions[i].amount)))
         }
+        
+        //Create set based on entries
         let barDataSet = BarChartDataSet(values: entries, label: "")
+        
+        //Set chart data
         barChartView.data = BarChartData(dataSet: barDataSet)
+        
+        //Remove description label and legend
         barChartView.chartDescription?.text = ""
         barChartView.legend.enabled = false
+        
+        //Set x axis labels to the bottom
         barChartView.xAxis.labelPosition = .bottom
     }
 

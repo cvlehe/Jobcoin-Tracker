@@ -25,11 +25,16 @@ class TransactionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    //Populate cell for transaction
     func populate (transaction:Transaction) {
+        //If there is no value for from address, display (new) like it does in Jobcoin Viewer
         fromLabel.text = transaction.fromAddress != nil ? transaction.fromAddress : "(new)"
+        
+        //Set recipient's address and the amount for the transaction
         toLabel.text = transaction.toAddress
         amountLabel.text = "\(transaction.amount!)"
         
+        //Set date of transaction
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm:ss a"
         dateLabel.text = dateFormatter.string(from: transaction.timestamp)
