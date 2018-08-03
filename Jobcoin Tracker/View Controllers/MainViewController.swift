@@ -67,7 +67,7 @@ extension MainViewController:UITableViewDataSource {
 
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.graph) as! GraphTableViewCell
-            
+            cell.populate()
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.transaction) as! TransactionTableViewCell
@@ -84,6 +84,8 @@ extension MainViewController:UITableViewDataSource {
             return 67
         case 1:
             return 85
+        case 2:
+            return 237
         case 3:
             return 99
         default:
@@ -104,6 +106,10 @@ extension MainViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
 

@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Charts
 
 class GraphTableViewCell: UITableViewCell {
+    @IBOutlet weak var barChartView: BarChartView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +24,16 @@ class GraphTableViewCell: UITableViewCell {
     }
     
     func populate () {
-        
+        var entries:[BarChartDataEntry] = []
+        let transactions:[Transaction] = User.current().transactions.reversed()
+        for i in 0..<transactions.count {
+            entries.append(BarChartDataEntry(x: Double(i), y: Double(transactions[i].amount)))
+        }
+        let barDataSet = BarChartDataSet(values: entries, label: "")
+        barChartView.data = BarChartData(dataSet: barDataSet)
+        barChartView.chartDescription?.text = ""
+        barChartView.legend.enabled = false
+        barChartView.xAxis.labelPosition = .bottom
     }
 
 }
