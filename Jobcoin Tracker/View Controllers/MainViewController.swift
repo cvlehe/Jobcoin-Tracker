@@ -16,7 +16,6 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        print("User:",UserHelper.current(),"Address:",UserHelper.current().address, "Balance:",UserHelper.current().balance,"Transactions:",UserHelper.current().transactions)
     }
 
     @IBAction func signOutButtonPressed(_ sender: UIButton) {
@@ -41,7 +40,7 @@ extension MainViewController:UITableViewDelegate {
 
 extension MainViewController:UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +48,7 @@ extension MainViewController:UITableViewDataSource {
         case 0, 1, 2:
             return 1
         case 3:
-            return UserHelper.current().transactions.count
+            return User.current().transactions.count
         default:
             return 0
         }
@@ -62,16 +61,17 @@ extension MainViewController:UITableViewDataSource {
             cell.populate()
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.graph) as! GraphTableViewCell
-            
-            return cell
-        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.send) as! SendTableViewCell
+            cell.delegate = self
+            return cell
+
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.graph) as! GraphTableViewCell
             
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIDs.transaction) as! TransactionTableViewCell
-            
+            cell.populate(transaction: User.current().transactions[indexPath.row])
             return cell
         default:
             return UITableViewCell()
@@ -82,8 +82,55 @@ extension MainViewController:UITableViewDataSource {
         switch indexPath.section {
         case 0:
             return 67
+        case 1:
+            return 85
+        case 3:
+            return 99
         default:
             return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+        headerView.backgroundColor = #colorLiteral(red: 0.9098039216, green: 0.9098039216, blue: 0.9137254902, alpha: 1)
+        let label = UILabel(frame: CGRect(x: 8, y: 10, width: 200, height: 20))
+        let headers = ["Current Balance", "Send", "Stats", "Transactions"]
+        label.text = headers[section]
+        label.textColor = UIColor.darkGray
+        headerView.addSubview(label)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+}
+
+extension MainViewController:SendCellDelegate {
+    func sendButtonPressed(toTextField: UITextField?, amountTextField: UITextField?, completion: @escaping (Bool) -> Void) {
+        guard let toAddress = toTextField?.text, !toAddress.isEmpty else {
+            UIAlertController.showAlert(viewController: self, title: "To Address Required", message: "An address to send to is required. Please enter the recipient's address and try again.")
+            completion(false)
+            return
+        }
+        
+        guard let amountString = amountTextField?.text, !amountString.isEmpty, let amount = Float(amountString)  else {
+            UIAlertController.showAlert(viewController: self, title: "Amount Required", message: "An amount to send to is required. Please enter the amount and try again.")
+            completion(false)
+            return
+        }
+        
+        TransactionHelper.send(toAddress: toAddress, amount: amount) { (success, error) in
+            if success {
+                self.tableView.reloadData()
+            }else if let e = error {
+                UIAlertController.showAlert(viewController: self, title: "Error", message: e)
+            }else {
+                UIAlertController.showAlert(viewController: self, title: "Error", message: "There was an error signing in. Please try again.")
+            }
+            completion(success)
+        }
+        
     }
 }

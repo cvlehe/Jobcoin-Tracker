@@ -15,7 +15,7 @@ struct ViewControllerIds {
 struct Urls {
     private static let baseUrl = "http://jobcoin.gemini.com/finisher/api/"
     static let addressInfo     = baseUrl + "addresses/"
-    static let transactions    = baseUrl + "transactions/"
+    static let transactions    = baseUrl + "transactions"
 }
 
 struct Paramters {

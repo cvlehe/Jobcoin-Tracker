@@ -13,6 +13,8 @@ struct User {
     var transactions:[Transaction] = []
     var address:String!
     
+    private static var currentUser:User!
+
     init() {}
     
     init(address:String, json:[String:Any]) {
@@ -23,11 +25,28 @@ struct User {
         
         if let transDicts = json[Response.transactions] as? [[String:Any]] {
             transactions = []
-            for trans in transDicts {
+            for trans in transDicts.reversed() {
                 transactions.append(Transaction(json: trans))
             }
         }
     }
     
-
+    static func current()->User {
+        if currentUser == nil {
+            currentUser = User()
+        }
+        return currentUser
+    }
+    
+    static func setCurrentUser(user:User?) {
+        currentUser = user
+    }
+    
+    static func addTransaction (transaction:Transaction) {
+        currentUser.transactions.insert(transaction, at: 0)
+    }
+    
+    static func updateBalance (amount:Float) {
+        currentUser.balance += amount
+    }
 }

@@ -24,7 +24,7 @@ class CurrentBalanceTableViewCell: UITableViewCell {
     }
 
     func populate () {
-        addressLabel.text = UserHelper.current().address
-        balanceLabel.text = "\(UserHelper.current().balance)"
+        addressLabel.text = User.current().address
+        balanceLabel.text = "\(User.current().balance)"
     }
 }

@@ -23,6 +23,7 @@ class SignInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         guard let address = addressTextField.text, !address.isEmpty else {
@@ -35,6 +36,7 @@ class SignInViewController: UIViewController {
         UserHelper.signIn(address: address) { (success, error) in
             if success {
                 MainViewController.display(viewController: self)
+                self.addressTextField.text = nil
             }else if let e = error {
                 UIAlertController.showAlert(viewController: self, title: "Error", message: e)
             }else {
