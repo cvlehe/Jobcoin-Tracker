@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,7 +54,7 @@
                                         <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobcoin Tracker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWd-2i-WZv">
-                                        <rect key="frame" x="109" y="227.66666666666663" width="156" height="87"/>
+                                        <rect key="frame" x="109.66666666666669" y="227.66666666666663" width="156" height="87"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="156" id="Ey0-Sh-nH2"/>
                                             <constraint firstAttribute="height" constant="87" id="VJ8-PN-p0e"/>
@@ -100,7 +98,6 @@
         <!--Main View Controller-->
         <scene sceneID="1HV-65-Zea">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eAk-tU-dwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainVC" id="U0N-IG-NBN" customClass="MainViewController" customModule="Jobcoin_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAn-ev-czf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -110,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobcoin Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-fW-bNR">
-                                        <rect key="frame" x="119" y="41" width="136" height="21"/>
+                                        <rect key="frame" x="119.66666666666669" y="41" width="136" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="136" id="QbM-ug-s1j"/>
                                             <constraint firstAttribute="height" constant="21" id="nqA-TP-ErX"/>
@@ -120,7 +117,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0V-0C-UJa">
-                                        <rect key="frame" x="310" y="36" width="57" height="30"/>
+                                        <rect key="frame" x="310" y="36.666666666666664" width="57" height="29.999999999999993"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="C0R-xw-ad4"/>
                                             <constraint firstAttribute="height" constant="30" id="RWm-oc-gP8"/>
@@ -163,7 +160,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka2-gN-GOf">
-                                                    <rect key="frame" x="85" y="11.666666666666664" width="275" height="17"/>
+                                                    <rect key="frame" x="85" y="11" width="275" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -243,7 +240,7 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="brG-jE-gFe">
-                                                    <rect key="frame" x="302" y="24.333333333333329" width="37" height="37"/>
+                                                    <rect key="frame" x="301.66666666666669" y="24" width="37" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="Yaz-mt-rGo"/>
                                                         <constraint firstAttribute="width" constant="37" id="ajG-zb-bPa"/>
@@ -281,7 +278,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="236.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNK-mO-Yq7" customClass="BarChartView" customModule="Charts">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNK-mO-Yq7" customClass="LineChartView" customModule="Charts">
                                                     <rect key="frame" x="15" y="11" width="345" height="215"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
@@ -295,7 +292,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="barChartView" destination="UNK-mO-Yq7" id="LY5-SK-ek9"/>
+                                            <outlet property="lineChartView" destination="UNK-mO-Yq7" id="XlH-YO-1Op"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="transactionCell" rowHeight="99" id="aiz-jj-WQr" customClass="TransactionTableViewCell" customModule="Jobcoin_Tracker" customModuleProvider="target">
@@ -404,6 +401,7 @@
                         <outlet property="tableView" destination="ohY-kw-EuP" id="Xeu-Nb-yJ1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAk-tU-dwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="133.00492610837438"/>
         </scene>

@@ -10,7 +10,7 @@ import UIKit
 import Charts
 
 class GraphTableViewCell: UITableViewCell {
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var lineChartView: LineChartView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class GraphTableViewCell: UITableViewCell {
     
     func populate () {
         //Generate bar chart data entries
-        var entries:[BarChartDataEntry] = []
+        var entries:[ChartDataEntry] = []
         
         //Track balance over time by adding or subtracting transaction amounts based on the recipient address
         let transactions:[Transaction] = User.current().transactions.reversed()
@@ -33,24 +33,24 @@ class GraphTableViewCell: UITableViewCell {
         for i in 0..<transactions.count {
             let currentTransaction = transactions[i]
             balance += currentTransaction.toAddress == User.current().address ? currentTransaction.amount : -currentTransaction.amount
-            entries.append(BarChartDataEntry(x: Double(i), y: Double(balance)))
+            entries.append(ChartDataEntry(x: Double(i), y: Double(balance)))
         }
 
         
         //Create set based on entries
-        let barDataSet = BarChartDataSet(values: entries, label: "")
+        let barDataSet = LineChartDataSet(values: entries, label: "")
         
         //Set chart data
-        barChartView.data = BarChartData(dataSet: barDataSet)
+        lineChartView.data = LineChartData(dataSet: barDataSet)
         
         //Remove description label and legend
-        barChartView.chartDescription?.text = ""
-        barChartView.legend.enabled = false
-        barChartView.xAxis.drawLabelsEnabled = false
-        barChartView.leftAxis.drawLabelsEnabled = false
+        lineChartView.chartDescription?.text = ""
+        lineChartView.legend.enabled = false
+        lineChartView.xAxis.drawLabelsEnabled = false
+        lineChartView.leftAxis.drawLabelsEnabled = false
         
         //Set x axis labels to the bottom
-        barChartView.xAxis.labelPosition = .bottom
+        lineChartView.xAxis.labelPosition = .bottom
     }
 
 }
